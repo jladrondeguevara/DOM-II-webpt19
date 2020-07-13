@@ -11,5 +11,9 @@ header.addEventListener('click', () => {
 let busImg = document.querySelector("img");
 
 busImg.addEventListener("mouseenter", () => {
-    busImg.style.transform = "scale(.8)"
+    busImg.style.transform = "scale(1.2)"
+})
+
+busImg.addEventListener("mouseleave", () => {
+    busImg.style.transform = "scale(1)"
 })
