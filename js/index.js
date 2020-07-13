@@ -57,8 +57,14 @@ window.addEventListener('scroll', e => {
     }
 })
 
+//when doublclicking the welcome header, it will underline.
 const welcomeHeader = document.querySelector("h2");
 
 welcomeHeader.addEventListener("dblclick", () => {
     welcomeHeader.style.textDecoration = "underline"
+})
+
+//when finishes loading, message will show 
+window.addEventListener('load', () => {
+    console.log("Done loading! :D")
 })
