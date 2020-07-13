@@ -56,3 +56,9 @@ window.addEventListener('scroll', e => {
         counter = true;
     }
 })
+
+const welcomeHeader = document.querySelector("h2");
+
+welcomeHeader.addEventListener("dblclick", () => {
+    welcomeHeader.style.textDecoration = "underline"
+})
