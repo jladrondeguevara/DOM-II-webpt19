@@ -35,3 +35,24 @@ document.addEventListener("keydown", event => {
         busImg.style.transform = "scale(.5)";
     }
 })
+
+//when scrolling, nav bar color changes
+let lastPosition = 0;
+let counter = false;
+const headerContainer = document.querySelector(".main-navigation");
+function changeHeaderColor(scrollPosition) {
+    if(lastPosition >= 500){
+        headerContainer.style.backgroundColor = "lightblue";
+    }
+}
+
+window.addEventListener('scroll', e => {
+    lastPosition = window.scrollY;
+    if(!counter){
+        window.requestAnimationFrame(() => {
+                changeHeaderColor(lastPosition);
+                counter = false;
+            });
+        counter = true;
+    }
+})
