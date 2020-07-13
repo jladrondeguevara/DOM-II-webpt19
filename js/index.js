@@ -6,7 +6,7 @@ header.addEventListener('click', () => {
 });
 
 
-//when doubleclicking the image, it will display the word "fun"
+//when hovering over bus image, create emphasis
 
 let busImg = document.querySelector("img");
 
@@ -16,4 +16,12 @@ busImg.addEventListener("mouseenter", () => {
 
 busImg.addEventListener("mouseleave", () => {
     busImg.style.transform = "scale(1)"
+})
+
+//when resizing, background turns gray
+
+let body = document.querySelector("body")
+
+window.addEventListener("resize", () => {
+    body.style.backgroundColor = "gray";
 })
