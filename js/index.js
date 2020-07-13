@@ -5,7 +5,11 @@ header.addEventListener('click', () => {
     header.style.color = "red";
 });
 
+
 //when doubleclicking the image, it will display the word "fun"
 
-const busImg = document.querySelector("img")
-console.log(busImg);
+let busImg = document.querySelector("img");
+
+busImg.addEventListener("mouseenter", () => {
+    busImg.style.transform = "scale(.8)"
+})
