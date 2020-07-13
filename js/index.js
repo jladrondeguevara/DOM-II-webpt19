@@ -25,3 +25,13 @@ let body = document.querySelector("body")
 window.addEventListener("resize", () => {
     body.style.backgroundColor = "gray";
 })
+
+//when pressing any key, resizes the bus image
+
+document.addEventListener("keydown", event => {
+    if(event.isComposing || event.keyCode === 229){
+        return;
+    } else if(event.keyCode===65) {
+        busImg.style.transform = "scale(.5)";
+    }
+})
